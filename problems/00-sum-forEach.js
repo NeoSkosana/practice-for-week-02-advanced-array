@@ -12,14 +12,16 @@ console.log(sumForEach([])); // 0
 */
 
 let sumForEach = function(arr) {
+  // create variable to hold the sum
   let sum = 0;
-
+  // use forEach to iterate over the array
   arr.forEach(function(num) {
+    // add each number to the sum
     sum += num;
   });
-
-  console.log(sum);
+  // return the sum
   return sum;
+
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
