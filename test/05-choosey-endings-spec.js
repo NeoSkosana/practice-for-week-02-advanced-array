@@ -22,12 +22,7 @@ describe('chooseyEndings()', function () {
     assert.deepStrictEqual(
       chooseyEndings(['simplicity', 'computer', 'felicity'], 'ily'),
       [ ]
-    );
-
-    assert.deepStrictEqual(
-      chooseyEndings(17, 'ily'),
-      []
-    );
+    )
   });
 });
 

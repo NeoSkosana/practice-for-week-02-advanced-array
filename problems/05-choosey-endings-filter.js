@@ -26,7 +26,14 @@ console.log(chooseyEndings(17, 'ily'));
 */
 
 let chooseyEndings = function(words, suffix) {
-  // Your code here
+  filteredWord = words.filter(function(word) {
+    console.log(word, suffix);
+    res = word.endsWith(suffix);
+    console.log(res);
+    return res;
+  })
+  console.log(filteredWord);
+  return filteredWord;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
@@ -35,4 +42,4 @@ try {
   module.exports = chooseyEndings;
 } catch (e) {
   module.exports = null;
-}
+}
