@@ -16,7 +16,17 @@ console.log(snakeToCamel('APp_ACADEMY_iS_cOol')); // 'AppAcademyIsCool'
 */
 
 function snakeToCamel(str) {
-    // Your code here
+    // Split the string by underscores
+    // call map() on the resulting array
+    // get the first word, so capitalize it
+    // concatenate the rest of the words with capitalized first letter
+    // return str to the reduce function
+    // join the array back into a string
+
+    words = str.split('_');
+    return words.map(function(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    }).join('');
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
@@ -25,4 +35,4 @@ try {
     module.exports = snakeToCamel;
 } catch (e) {
     module.exports = null;
-}
+}
