@@ -19,11 +19,34 @@ console.log(choosePrimes([5, 6, 4, 11, 2017])); // [ 5, 11, 2017 ]
 */
 
 let isPrime = function(num) {
-    // Your code here
+    // Check if num is less than 2
+    // return false if it is
+    // check if num is equal to 2
+    // return true if it is
+    // check if num is divisible by any number other than 1 and itself
+    // return false if it is
+    // return true if it is not divisible by any number other than 1 and itself
+
+    if (num < 2) return false;
+    if (num === 2) return true;
+
+    for (let i = 2; i <= num; i++) {
+        if (num % i === 0 && i !== num) {
+            return false;
+        }
+    }
+    return true;
 }
 
+
 let choosePrimes = function(nums) {
-    // Your code here
+    // use filter on nums
+    // check if each number is prime using the isPrime helper function
+    // return the filtered array of prime numbers
+
+    return nums.filter(function(num) {
+        return isPrime(num);
+    } )
 }
 
 // alternative solution using Array.filter
@@ -37,4 +60,4 @@ try {
     module.exports = choosePrimes;
 } catch (e) {
     module.exports = null;
-}
+}
