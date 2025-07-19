@@ -26,7 +26,17 @@ console.log(twoDimensionalProduct(arr2)); // 88
 */
 
 let twoDimensionalProduct = function(arr) {
-    // Your code here
+    // loop through the outer array
+    // use reduce to multiply all inner arrays together
+    // then call reduce again to multiply all the products together
+
+    for (let i = 0; i < arr.length; i++) {
+        // use reduce to multiply all elements in the inner array
+        arr[i] = arr[i].reduce((acc, num) => acc * num, 1);
+    }
+
+    return arr.reduce((acc, num) => acc * num, 1);
+        
 };
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
